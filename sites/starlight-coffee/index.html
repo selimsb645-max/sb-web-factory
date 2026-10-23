@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starlight Coffee House — Handcrafted coffee, ready when you are</title>
+<meta name="description" content="Starlight Coffee House Seattle — handcrafted espresso, cold brew, matcha and fresh pastries. Order ahead online, ready in 10 minutes. Free rewards program.">
+<meta name="keywords" content="coffee shop seattle, order coffee online, cold brew, matcha latte, coffee rewards program, espresso bar">
+<style>
+:root{--primary:#00754a;--accent:#cba35c;--bg:#f7f3ee;--fg:#1e3932;--mut:#6f675c;--card:#ffffff;--line:rgba(30,57,50,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.65}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:8px}
+.brand{font-weight:800;font-size:1.15rem;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-in div a{color:var(--mut);text-decoration:none;margin-left:18px;font-size:.93rem}
+.nav-in div a:hover{color:var(--fg)}
+header{padding:110px 0 90px;text-align:center;background:radial-gradient(ellipse 60% 55% at 50% -10%,color-mix(in srgb,var(--primary) 24%,transparent),transparent)}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.15;letter-spacing:-.02em}
+h1 span{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);max-width:600px;margin:20px auto 34px;font-size:1.1rem}
+.btn{display:inline-block;padding:14px 30px;border-radius:12px;font-weight:600;text-decoration:none;transition:.25s;cursor:pointer;border:none;font-size:1rem}
+.btn-p{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;box-shadow:0 6px 24px color-mix(in srgb,var(--primary) 40%,transparent)}
+.btn-p:hover{transform:translateY(-3px)}
+.btn-o{border:1px solid var(--line);color:var(--fg);background:var(--card)}
+.btn-o:hover{border-color:var(--accent)}
+section{padding:70px 0}
+.stitle{text-align:center;font-size:1.9rem;font-weight:800;letter-spacing:-.02em;margin-bottom:40px}
+.about-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:center}
+.about-box p{color:var(--mut)}
+.about-box .logo-big{text-align:center;font-size:4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.25s}
+.item:hover{transform:translateY(-5px);border-color:var(--primary)}
+.item .ic{font-size:1.6rem;margin-bottom:8px}
+.item h3{font-size:1.05rem;margin-bottom:6px}
+.item p{color:var(--mut);font-size:.9rem}
+.item .price{color:var(--accent);font-weight:700;margin-top:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:14px;height:130px;display:flex;align-items:center;justify-content:center;font-size:2.4rem}
+.hours{width:100%;max-width:420px;border-collapse:collapse;margin:14px auto 0}
+.hours td{padding:9px 14px;border-bottom:1px dashed var(--line);color:var(--mut)}
+.hours td:first-child{color:var(--fg);font-weight:600}
+.bform{max-width:480px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.bform label{display:block;font-weight:600;margin:13px 0 6px;font-size:.9rem}
+.bform input,.bform select,.bform textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:9px;background:transparent;color:var(--fg);font-size:.95rem;font-family:inherit}
+.bform button{width:100%;margin-top:18px}
+.note{color:var(--mut);font-size:.85rem;text-align:center;margin-top:12px}
+.wrap2{max-width:900px;margin:0 auto;padding:0 22px;text-align:center}
+.promo{background:linear-gradient(135deg,var(--primary),color-mix(in srgb,var(--accent) 55%,var(--primary)));color:#fff;padding:64px 0;margin:70px 0}
+.promo h2{font-size:1.9rem;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.promo p{max-width:560px;margin:0 auto 22px;opacity:.92}
+.btn-light{background:#fff;color:#1e3932}
+.btn-light:hover{transform:translateY(-3px)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;text-decoration:none;color:var(--fg)}
+.ccard:hover{border-color:var(--accent)}
+.ccard p{color:var(--mut);font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
+@media(max-width:640px){.nav-in div{display:none}}
+</style></head>
+<body id="top">
+<nav><div class="nav-in"><div class="brand">Starlight Coffee House</div><div><a href="#top">Home</a><a href="#about">About</a><a href="#items">Menu</a><a href="#gallery">Gallery</a><a href="#booking">Book</a><a href="#contact">Contact</a></div></div></nav>
+<header><div class="wrap">
+<h1>Coffee, ready in 10 minutes<br><span>Order ahead. Skip the line.</span></h1>
+<p class="sub">Small-batch roasted espresso, buttery pastries and a pickup shelf with your name on it — ordered from your phone in under a minute.</p>
+<a class="btn btn-p" href="#booking">Order Pickup</a>
+<a class="btn btn-o" href="tel:+15550304050" style="margin-left:10px">Call Now</a>
+</div></header>
+<section class="promo"><div class="wrap2"><h2>Starlight Rewards</h2><p>Every 10th drink is on us. Free to join, no card needed — just your phone number at the counter.</p><a class="btn btn-light" href="#booking">Join Free</a></div></section><section id="about"><div class="wrap"><div class="stitle">About Us</div><div class="about-box">
+<div class="logo-big">☕</div>
+<div><p>Starlight Coffee House roasts every bean in small batches and pulls every espresso shot by hand. Order ahead from your phone and your drink is waiting at the pickup shelf — hot, iced, or exactly how you like it.</p><table class="hours"><tr><td>Mon – Fri</td><td>6:00 – 20:00</td></tr><tr><td>Sat – Sun</td><td>7:00 – 21:00</td></tr></table></div>
+</div></div></section>
+<section id="items"><div class="wrap"><div class="stitle">Menu</div><div class="grid"><div class="item"><div class="ic">☕</div><h3>Caffè Latte</h3><p>Double shot, velvety steamed milk.</p><div class="price">$4.25</div></div><div class="item"><div class="ic">🥤</div><h3>Vanilla Cold Brew</h3><p>18-hour steep, vanilla bean, oat milk.</p><div class="price">$4.95</div></div><div class="item"><div class="ic">🍵</div><h3>Iced Matcha Latte</h3><p>Ceremonial-grade matcha, silky milk.</p><div class="price">$5.25</div></div><div class="item"><div class="ic">🥐</div><h3>Butter Croissant</h3><p>Baked twice daily, flaky layers.</p><div class="price">$3.50</div></div><div class="item"><div class="ic">🍰</div><h3>Lemon Loaf Slice</h3><p>Bright, dense, hand-glazed.</p><div class="price">$3.95</div></div><div class="item"><div class="ic">🍫</div><h3>Mocha Cookie</h3><p>Dark chocolate, espresso crumble.</p><div class="price">$2.75</div></div></div></section>
+<section id="gallery"><div class="wrap"><div class="stitle">Gallery</div><div class="gallery"><div class="shot">☕</div><div class="shot">🥤</div><div class="shot">🍵</div><div class="shot">🥐</div><div class="shot">🍰</div><div class="shot">🧊</div></div></section>
+<section id="booking"><div class="wrap"><div class="stitle">Order Online</div>
+<div class="bform">
+<label>Your name</label><input name="name" required placeholder="Your name">
+<label>Phone / Email</label><input name="contact" required placeholder="How do we reach you?">
+<label>What would you like?</label><textarea name="order" rows="3" required placeholder="e.g. 2 croissants, 1 birthday cake..."></textarea>
+<label>Preferred date &amp; time</label><input name="when" placeholder="e.g. Saturday morning">
+<button type="button" onclick="sendForm()">Place Order</button>
+<p class="note">We confirm every request personally — usually within a few hours.</p>
+</div></section>
+<section id="contact"><div class="wrap"><div class="stitle">Contact</div><div class="cgrid">
+<div class="ccard"><b>📍 Address</b><p>150 Main Street, Seattle</p></div>
+<div class="ccard"><b>📞 Phone</b><p>+1 555 030 4050</p></div>
+<div class="ccard"><b>✉️ Email</b><p>hello@starlightcoffee.example</p></div>
+</div></div></section>
+<footer><div class="wrap">© 2026 Starlight Coffee House — Handcrafted coffee, ready when you are</div></footer>
+<script>
+function sendForm(){
+  var f=document.querySelector('.bform');
+  var msg='New order request for Starlight Coffee House: '+f.querySelector('[name=name]').value+', '+f.querySelector('[name=contact]').value+', '+f.querySelector('[name=when]').value;
+  var ta=f.querySelector('[name=order]')||f.querySelector('[name=service]');
+  if(ta)msg+=', details: '+ta.value;
+  window.open('https://wa.me/0000000000?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body></html>

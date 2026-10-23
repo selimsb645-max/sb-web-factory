@@ -1,0 +1,43 @@
+{
+  "slug": "starlight-coffee",
+  "kind": "restaurant",
+  "business": {
+    "name": "Starlight Coffee House",
+    "tagline": "Handcrafted coffee, ready when you are",
+    "phone": "+1 555 030 4050",
+    "email": "hello@starlightcoffee.example",
+    "address": "150 Main Street, Seattle",
+    "about": "Starlight Coffee House roasts every bean in small batches and pulls every espresso shot by hand. Order ahead from your phone and your drink is waiting at the pickup shelf — hot, iced, or exactly how you like it.",
+    "hours": [["Mon – Fri", "6:00 – 20:00"], ["Sat – Sun", "7:00 – 21:00"]]
+  },
+  "theme": { "base": "cream", "primary": "#00754a", "accent": "#cba35c", "font": "'Inter',system-ui,sans-serif" },
+  "sections": {
+    "hero": {
+      "icon": "☕",
+      "headline": "Coffee, ready in 10 minutes",
+      "subline": "Order ahead. Skip the line.",
+      "text": "Small-batch roasted espresso, buttery pastries and a pickup shelf with your name on it — ordered from your phone in under a minute.",
+      "cta": "Order Pickup"
+    },
+    "promo": {
+      "title": "Starlight Rewards",
+      "text": "Every 10th drink is on us. Free to join, no card needed — just your phone number at the counter.",
+      "cta": "Join Free",
+      "href": "#booking"
+    },
+    "items": [
+      { "icon": "☕", "name": "Caffè Latte", "desc": "Double shot, velvety steamed milk.", "price": "$4.25" },
+      { "icon": "🥤", "name": "Vanilla Cold Brew", "desc": "18-hour steep, vanilla bean, oat milk.", "price": "$4.95" },
+      { "icon": "🍵", "name": "Iced Matcha Latte", "desc": "Ceremonial-grade matcha, silky milk.", "price": "$5.25" },
+      { "icon": "🥐", "name": "Butter Croissant", "desc": "Baked twice daily, flaky layers.", "price": "$3.50" },
+      { "icon": "🍰", "name": "Lemon Loaf Slice", "desc": "Bright, dense, hand-glazed.", "price": "$3.95" },
+      { "icon": "🍫", "name": "Mocha Cookie", "desc": "Dark chocolate, espresso crumble.", "price": "$2.75" }
+    ],
+    "gallery": ["☕", "🥤", "🍵", "🥐", "🍰", "🧊"],
+    "booking": { "enabled": true, "type": "order", "notify_whatsapp": "" }
+  },
+  "seo": {
+    "description": "Starlight Coffee House Seattle — handcrafted espresso, cold brew, matcha and fresh pastries. Order ahead online, ready in 10 minutes. Free rewards program.",
+    "keywords": ["coffee shop seattle", "order coffee online", "cold brew", "matcha latte", "coffee rewards program", "espresso bar"]
+  }
+}

@@ -29,6 +29,12 @@ def menu_or_services(spec):
         for i in items)
     return f'<section id="items"><div class="wrap"><div class="stitle">{label}</div><div class="grid">{cards}</div></section>'
 
+def promo_band(spec):
+    pr = spec.get("sections", {}).get("promo")
+    if not pr:
+        return ""
+    return f"""<section class="promo"><div class="wrap2"><h2>{esc(pr["title"])}</h2><p>{esc(pr.get("text",""))}</p><a class="btn btn-light" href="{esc(pr.get("href","#booking"))}">{esc(pr.get("cta","Learn More"))}</a></div></section>"""
+
 def gallery(spec):
     shots = spec.get("sections", {}).get("gallery", [])
     if not shots:
@@ -65,11 +71,12 @@ def render(spec):
     primary = t.get("primary", "#8b7cff")
     accent = t.get("accent", "#2dd4bf")
     base = t.get("base", "dark")
-    bg = "#0b0d17" if base == "dark" else "#faf7f2"
-    fg = "#eef1fa" if base == "dark" else "#1c1a17"
-    mut = "#9aa3c0" if base == "dark" else "#6b655c"
-    card = "rgba(255,255,255,.045)" if base == "dark" else "#ffffff"
-    line = "rgba(255,255,255,.1)" if base == "dark" else "rgba(0,0,0,.08)"
+    if base == "cream":
+        bg, fg, mut, card, line = "#f7f3ee", "#1e3932", "#6f675c", "#ffffff", "rgba(30,57,50,.12)"
+    elif base == "fresh":
+        bg, fg, mut, card, line = "#faf7f2", "#1c1a17", "#6b655c", "#ffffff", "rgba(0,0,0,.08)"
+    else:
+        bg, fg, mut, card, line = "#0b0d17", "#eef1fa", "#9aa3c0", "rgba(255,255,255,.045)", "rgba(255,255,255,.1)"
     font = t.get("font", "'Inter',system-ui,sans-serif")
     bk = sec.get("booking", {})
     bk_word = "order" if bk.get("type") == "order" else "booking"
@@ -128,6 +135,12 @@ section{{padding:70px 0}}
 .bform input,.bform select,.bform textarea{{width:100%;padding:12px;border:1px solid var(--line);border-radius:9px;background:transparent;color:var(--fg);font-size:.95rem;font-family:inherit}}
 .bform button{{width:100%;margin-top:18px}}
 .note{{color:var(--mut);font-size:.85rem;text-align:center;margin-top:12px}}
+.wrap2{{max-width:900px;margin:0 auto;padding:0 22px;text-align:center}}
+.promo{{background:linear-gradient(135deg,var(--primary),color-mix(in srgb,var(--accent) 55%,var(--primary)));color:#fff;padding:64px 0;margin:70px 0}}
+.promo h2{{font-size:1.9rem;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}}
+.promo p{{max-width:560px;margin:0 auto 22px;opacity:.92}}
+.btn-light{{background:#fff;color:#1e3932}}
+.btn-light:hover{{transform:translateY(-3px)}}
 .cgrid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}}
 .ccard{{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;text-decoration:none;color:var(--fg)}}
 .ccard:hover{{border-color:var(--accent)}}
@@ -143,7 +156,7 @@ footer{{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:
 <a class="btn btn-p" href="{('#booking' if bk.get('enabled') else '#contact')}">{esc(sec.get("hero",{}).get("cta","Contact Us"))}</a>
 <a class="btn btn-o" href="tel:{esc(re.sub(r'[^+0-9]','',b.get("phone","")))}" style="margin-left:10px">Call Now</a>
 </div></header>
-<section id="about"><div class="wrap"><div class="stitle">About Us</div><div class="about-box">
+{promo_band(spec)}<section id="about"><div class="wrap"><div class="stitle">About Us</div><div class="about-box">
 <div class="logo-big">{esc(sec.get("hero",{}).get("icon","✨"))}</div>
 <div><p>{esc(b.get("about",""))}</p>{hours_table(b.get("hours"))}</div>
 </div></div></section>
