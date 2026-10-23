@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenLeaf Café — Fresh food, fast pickup, zero hassle</title>
+<meta name="description" content="GreenLeaf Café Portland — fresh salads, bowls, sandwiches and coffee. Order ahead online, ready in 15 minutes.">
+<meta name="keywords" content="cafe portland, order ahead food, fresh salad, coffee shop, 15 minute pickup">
+<style>
+:root{--primary:#10b981;--accent:#f59e0b;--bg:#0b0d17;--fg:#eef1fa;--mut:#9aa3c0;--card:rgba(255,255,255,.045);--line:rgba(255,255,255,.1)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.65}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:8px}
+.brand{font-weight:800;font-size:1.15rem;background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-in div a{color:var(--mut);text-decoration:none;margin-left:18px;font-size:.93rem}
+.nav-in div a:hover{color:var(--fg)}
+header{padding:110px 0 90px;text-align:center;background:radial-gradient(ellipse 60% 55% at 50% -10%,color-mix(in srgb,var(--primary) 24%,transparent),transparent)}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.15;letter-spacing:-.02em}
+h1 span{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);max-width:600px;margin:20px auto 34px;font-size:1.1rem}
+.btn{display:inline-block;padding:14px 30px;border-radius:12px;font-weight:600;text-decoration:none;transition:.25s;cursor:pointer;border:none;font-size:1rem}
+.btn-p{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;box-shadow:0 6px 24px color-mix(in srgb,var(--primary) 40%,transparent)}
+.btn-p:hover{transform:translateY(-3px)}
+.btn-o{border:1px solid var(--line);color:var(--fg);background:var(--card)}
+.btn-o:hover{border-color:var(--accent)}
+section{padding:70px 0}
+.stitle{text-align:center;font-size:1.9rem;font-weight:800;letter-spacing:-.02em;margin-bottom:40px}
+.about-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:center}
+.about-box p{color:var(--mut)}
+.about-box .logo-big{text-align:center;font-size:4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.25s}
+.item:hover{transform:translateY(-5px);border-color:var(--primary)}
+.item .ic{font-size:1.6rem;margin-bottom:8px}
+.item h3{font-size:1.05rem;margin-bottom:6px}
+.item p{color:var(--mut);font-size:.9rem}
+.item .price{color:var(--accent);font-weight:700;margin-top:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:14px;height:130px;display:flex;align-items:center;justify-content:center;font-size:2.4rem}
+.hours{width:100%;max-width:420px;border-collapse:collapse;margin:14px auto 0}
+.hours td{padding:9px 14px;border-bottom:1px dashed var(--line);color:var(--mut)}
+.hours td:first-child{color:var(--fg);font-weight:600}
+.bform{max-width:480px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.bform label{display:block;font-weight:600;margin:13px 0 6px;font-size:.9rem}
+.bform input,.bform select,.bform textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:9px;background:transparent;color:var(--fg);font-size:.95rem;font-family:inherit}
+.bform button{width:100%;margin-top:18px}
+.note{color:var(--mut);font-size:.85rem;text-align:center;margin-top:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;text-decoration:none;color:var(--fg)}
+.ccard:hover{border-color:var(--accent)}
+.ccard p{color:var(--mut);font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
+@media(max-width:640px){.nav-in div{display:none}}
+</style></head>
+<body id="top">
+<nav><div class="nav-in"><div class="brand">GreenLeaf Café</div><div><a href="#top">Home</a><a href="#about">About</a><a href="#items">Menu</a><a href="#gallery">Gallery</a><a href="#booking">Book</a><a href="#contact">Contact</a></div></div></nav>
+<header><div class="wrap">
+<h1>Fresh food, 15-minute pickup<br><span>Order ahead. Skip the line.</span></h1>
+<p class="sub">Locally-sourced salads, bowls, and the best flat white in Portland — ordered from your phone in under a minute.</p>
+<a class="btn btn-p" href="#booking">Order Pickup</a>
+<a class="btn btn-o" href="tel:+15550203040" style="margin-left:10px">Call Now</a>
+</div></header>
+<section id="about"><div class="wrap"><div class="stitle">About Us</div><div class="about-box">
+<div class="logo-big">🥗</div>
+<div><p>GreenLeaf Café serves honest, locally-sourced food in the heart of Portland. Order ahead from your phone and your meal is ready for pickup in 15 minutes — hot, fresh, and waiting.</p><table class="hours"><tr><td>Mon – Thu</td><td>8:00 – 21:00</td></tr><tr><td>Fri – Sat</td><td>8:00 – 22:00</td></tr><tr><td>Sun</td><td>9:00 – 18:00</td></tr></table></div>
+</div></div></section>
+<section id="items"><div class="wrap"><div class="stitle">Menu</div><div class="grid"><div class="item"><div class="ic">🥗</div><h3>Harvest Bowl</h3><p>Quinoa, roasted veg, tahini dressing.</p><div class="price">$11</div></div><div class="item"><div class="ic">🥪</div><h3>Market Sandwich</h3><p>Sourdough, daily filling, house pickles.</p><div class="price">$9</div></div><div class="item"><div class="ic">☕</div><h3>Flat White</h3><p>Double shot, silky microfoam.</p><div class="price">$4</div></div><div class="item"><div class="ic">🍰</div><h3>Cake of the Day</h3><p>Baked fresh every morning.</p><div class="price">$5</div></div></div></section>
+<section id="gallery"><div class="wrap"><div class="stitle">Gallery</div><div class="gallery"><div class="shot">🥗</div><div class="shot">🥪</div><div class="shot">☕</div><div class="shot">🍰</div></div></section>
+<section id="booking"><div class="wrap"><div class="stitle">Order Online</div>
+<div class="bform">
+<label>Your name</label><input name="name" required placeholder="Your name">
+<label>Phone / Email</label><input name="contact" required placeholder="How do we reach you?">
+<label>What would you like?</label><textarea name="order" rows="3" required placeholder="e.g. 2 croissants, 1 birthday cake..."></textarea>
+<label>Preferred date &amp; time</label><input name="when" placeholder="e.g. Saturday morning">
+<button type="button" onclick="sendForm()">Place Order</button>
+<p class="note">We confirm every request personally — usually within a few hours.</p>
+</div></section>
+<section id="contact"><div class="wrap"><div class="stitle">Contact</div><div class="cgrid">
+<div class="ccard"><b>📍 Address</b><p>77 Market Street, Portland</p></div>
+<div class="ccard"><b>📞 Phone</b><p>+1 555 020 3040</p></div>
+<div class="ccard"><b>✉️ Email</b><p>orders@greenleafcafe.example</p></div>
+</div></div></section>
+<footer><div class="wrap">© 2026 GreenLeaf Café — Fresh food, fast pickup, zero hassle</div></footer>
+<script>
+function sendForm(){
+  var f=document.querySelector('.bform');
+  var msg='New order request for GreenLeaf Café: '+f.querySelector('[name=name]').value+', '+f.querySelector('[name=contact]').value+', '+f.querySelector('[name=when]').value;
+  var ta=f.querySelector('[name=order]')||f.querySelector('[name=service]');
+  if(ta)msg+=', details: '+ta.value;
+  window.open('https://wa.me/0000000000?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body></html>

@@ -1,0 +1,35 @@
+{
+  "slug": "greenleaf-cafe",
+  "kind": "restaurant",
+  "business": {
+    "name": "GreenLeaf Café",
+    "tagline": "Fresh food, fast pickup, zero hassle",
+    "phone": "+1 555 020 3040",
+    "email": "orders@greenleafcafe.example",
+    "address": "77 Market Street, Portland",
+    "about": "GreenLeaf Café serves honest, locally-sourced food in the heart of Portland. Order ahead from your phone and your meal is ready for pickup in 15 minutes — hot, fresh, and waiting.",
+    "hours": [["Mon – Thu", "8:00 – 21:00"], ["Fri – Sat", "8:00 – 22:00"], ["Sun", "9:00 – 18:00"]]
+  },
+  "theme": { "base": "dark", "primary": "#10b981", "accent": "#f59e0b", "font": "'Inter',system-ui,sans-serif" },
+  "sections": {
+    "hero": {
+      "icon": "🥗",
+      "headline": "Fresh food, 15-minute pickup",
+      "subline": "Order ahead. Skip the line.",
+      "text": "Locally-sourced salads, bowls, and the best flat white in Portland — ordered from your phone in under a minute.",
+      "cta": "Order Pickup"
+    },
+    "items": [
+      { "icon": "🥗", "name": "Harvest Bowl", "desc": "Quinoa, roasted veg, tahini dressing.", "price": "$11" },
+      { "icon": "🥪", "name": "Market Sandwich", "desc": "Sourdough, daily filling, house pickles.", "price": "$9" },
+      { "icon": "☕", "name": "Flat White", "desc": "Double shot, silky microfoam.", "price": "$4" },
+      { "icon": "🍰", "name": "Cake of the Day", "desc": "Baked fresh every morning.", "price": "$5" }
+    ],
+    "gallery": ["🥗", "🥪", "☕", "🍰"],
+    "booking": { "enabled": true, "type": "order", "notify_whatsapp": "" }
+  },
+  "seo": {
+    "description": "GreenLeaf Café Portland — fresh salads, bowls, sandwiches and coffee. Order ahead online, ready in 15 minutes.",
+    "keywords": ["cafe portland", "order ahead food", "fresh salad", "coffee shop", "15 minute pickup"]
+  }
+}

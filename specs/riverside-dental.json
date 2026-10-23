@@ -1,0 +1,35 @@
+{
+  "slug": "riverside-dental",
+  "kind": "clinic",
+  "business": {
+    "name": "Riverside Dental Care",
+    "tagline": "Gentle, modern dentistry for the whole family",
+    "phone": "+1 555 010 2030",
+    "email": "hello@riversidedental.example",
+    "address": "210 Riverbend Ave, Springfield",
+    "about": "Riverside Dental Care has been serving Springfield families for over 15 years. From routine cleanings to same-day crowns, our calm, modern practice makes every visit easy — kids and nervous patients especially love our gentle approach.",
+    "hours": [["Mon – Fri", "8:00 – 18:00"], ["Sat", "9:00 – 14:00"], ["Sun", "Closed"]]
+  },
+  "theme": { "base": "fresh", "primary": "#0e7490", "accent": "#0ea5e9", "font": "'Inter',system-ui,sans-serif" },
+  "sections": {
+    "hero": {
+      "icon": "🦷",
+      "headline": "A calmer way to visit the dentist",
+      "subline": "Gentle care. Clear prices. Easy bookings.",
+      "text": "Family dentistry in Springfield with same-day appointments, modern equipment and a team that actually listens.",
+      "cta": "Book a Checkup"
+    },
+    "items": [
+      { "icon": "✨", "name": "Checkups & Cleanings", "desc": "Complete exams, digital X-rays and gentle polishing.", "price": "from $79" },
+      { "icon": "😄", "name": "Teeth Whitening", "desc": "Safe in-office whitening, visibly brighter in one visit.", "price": "from $199" },
+      { "icon": "👑", "name": "Same-Day Crowns", "desc": "Designed and placed in a single appointment.", "price": "from $699" },
+      { "icon": "🧒", "name": "Kids' Dentistry", "desc": "Fun, fear-free first visits that build good habits.", "price": "from $59" }
+    ],
+    "gallery": ["🦷", "😄", "✨", "🪥"],
+    "booking": { "enabled": true, "type": "appointment", "options": ["New patient checkup", "Cleaning", "Whitening consult", "Emergency"], "notify_whatsapp": "" }
+  },
+  "seo": {
+    "description": "Riverside Dental Care — gentle family dentistry in Springfield. Same-day crowns, whitening, kids' dentistry. Book online in seconds.",
+    "keywords": ["dentist springfield", "family dentistry", "teeth whitening", "same day crowns", "kids dentist"]
+  }
+}
